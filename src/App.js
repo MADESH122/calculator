@@ -1,17 +1,16 @@
 import React from 'react'
 import './App.css';
 import { useState } from 'react';
-
+import * as math from 'mathjs';
 
 const App = () => {
-
-  const [input, setInput] = useState('');
+   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
 
   const handelClick = (value) => {
     if (value === '=') {
       try {
-        setResult(eval(input).toString());
+        setResult(math.evaluate(input).toString());
       } catch (error) {
         setResult('Error');
       }
