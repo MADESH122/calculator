@@ -1,38 +1,513 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(21, 32, 36);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#outbox {
+    background: rgb(21, 32, 36);
+    height: 600px;
+    width: 350px;
+    border-radius: 10px;
+    border: white 2px solid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#showdata #getNumber {
+    width: 97%;
+    height: 90px;
+    margin: 5px;
+    font-size: 55px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+#Answer {
+    padding: 0 10px;
+    font-size: 18px;
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.allBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+.allBtn button {
+    height: 67px;
+    width: 57px;
+    border: none;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    border-radius: 15px;
+    color: black;
+    font-weight: 400;
+    background-color: white;
+}
+
+/* function btn  */
+.allBtn .functionbtn {
+    background-color: rgb(236, 155, 4);
+    color: white;
+}
+
+/* hover effect */
+.allBtn button:hover {
+    opacity: 0.7;
+}
+
+/* -------------media-queary------------- */
+@media screen and (max-width:315px) {
+    #outbox {
+        border: none;
+    }
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 110px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 63px;
+        width: 53px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width:295px) {
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 125px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 60px;
+        width: 50px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-width:285px) {
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 135px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 57px;
+        width: 47px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-width:285px) {
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 135px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 57px;
+        width: 47px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-width:273px) {
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 135px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 57px;
+        width: 47px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-height:600px) {
+
+    #outbox {
+        background: rgb(21, 32, 36);
+        height: 580px;
+        width: 330px;
+    }
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 100px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 57px;
+        width: 47px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-height:580px) {
+
+    #outbox {
+        background: rgb(21, 32, 36);
+        height: 560px;
+        width: 310px;
+    }
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 100px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 57px;
+        width: 47px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-height:560px) {
+
+    #outbox {
+        background: rgb(21, 32, 36);
+        height: 540px;
+        width: 290px;
+    }
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 100px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 57px;
+        width: 47px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-height:544px) {
+
+    #outbox {
+        background: rgb(21, 32, 36);
+        height: 520px;
+        width: 270px;
+    }
+
+    .allBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0 0 0;
+    }
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 90px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 57px;
+        width: 47px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 9px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-height:520px) {
+
+    #outbox {
+        background: rgb(21, 32, 36);
+        height: 500px;
+        width: 250px;
+    }
+
+    .allBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 9px 0 0 0;
+    }
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 90px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 56px;
+        width: 46px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 8px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-height:500px) {
+
+    #outbox {
+        background: rgb(21, 32, 36);
+        height: 480px;
+        width: 230px;
+    }
+
+    .allBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px 0 0 0;
+    }
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 90px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 53px;
+        width: 43px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 7px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-width:229px) {
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 95px;
+        margin: 5px;
+        font-size: 55px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 52px;
+        width: 40px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 8px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
+}
+
+@media screen and (max-height:480px) {
+
+    #outbox {
+        background: rgb(21, 32, 36);
+        height: 475px;
+        width: 200px;
+    }
+
+    .allBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px 0 0 0;
+    }
+
+    #showdata #getNumber {
+        width: 97%;
+        height: 90px;
+        margin: 5px;
+        font-size: 65px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        outline: none;
+    }
+
+    .allBtn button {
+        height: 50px;
+        width: 40px;
+        border: none;
+        text-align: center;
+        font-size: 30px;
+        margin: 5px;
+        border-radius: 15px;
+        color: black;
+        font-weight: 400;
+        background-color: white;
+    }
+
 }
